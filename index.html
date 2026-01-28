@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-  <!-- TikTok Pixel Code Start -->
-  <script>
-  !function (w, d, t) {
-    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-  var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-  ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-    ttq.load('D47C8FBC77U2P8MCK090');
-    ttq.page();
-  }(window, document, 'ttq');
-  </script>
-  <!-- TikTok Pixel Code End -->
-
- <script
-	src="https://cdn.xtracky.com/scripts/utm-handler.js"
-	data-token="cd6ce0a5-8834-4a04-a686-7a8077a599ca"
->
-</script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirecionando...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Acessar</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: #0f0f0f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button {
+      width: 90%;
+      max-width: 320px;
+      padding: 18px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      background: #0088cc;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+
+    button:active {
+      transform: scale(0.97);
+      opacity: 0.9;
+    }
+  </style>
 
   <script>
-    (function () {
-      var BOT_URL = "https://t.me/naysafada08_bot?start=tiktok";
-      var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+    function redirectToTelegram() {
+      var BOT_URL = "https://t.me/naysafada08_bot?start=";
 
-      // ⏱️ delay de 2 segundos
-      setTimeout(function () {
-        if (isMobile) {
-          window.location.replace(BOT_URL);
-        } else {
-          window.location.href = BOT_URL;
-        }
-      }, 2000);
-    })();
+      // replace evita histórico (melhor em app)
+      window.location.replace(BOT_URL);
+    }
   </script>
-
 </head>
+
 <body>
+  <button onclick="redirectToTelegram()">
+    👉 Entrar no Telegram
+  </button>
 </body>
 </html>
