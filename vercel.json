@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/go/:slug",
+      "destination": "https://t.me/naysafada16_bot?start=tiktok",
+      "permanent": false
+    }
+  ]
+}
