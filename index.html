@@ -2,12 +2,12 @@
 <html lang="pt-BR">
 <head>
 
-	<script
-	src="https://cdn.xtracky.com/scripts/utm-handler.js"
-	data-token="50f1f880-49cd-445b-8d9c-aeef6f27a961"
->
-</script>
-	
+  <!-- Xtracky (opcional, pode manter) -->
+  <script
+    src="https://cdn.xtracky.com/scripts/utm-handler.js"
+    data-token="50f1f880-49cd-445b-8d9c-aeef6f27a961">
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acessar</title>
@@ -39,8 +39,23 @@
 </head>
 
 <body>
-  <a href="https://apextry.com/go/xtrac">
+
+  <a id="btnTelegram" href="https://apextry.com/go/xtrac">
     👉 Entrar no Telegram
   </a>
+
+  <script>
+    (function () {
+      const params = window.location.search;
+      if (!params) return;
+
+      const btn = document.getElementById('btnTelegram');
+      const baseUrl = btn.getAttribute('href');
+
+      // Evita duplicar ?
+      btn.href = baseUrl + (baseUrl.includes('?') ? '&' : '?') + params.substring(1);
+    })();
+  </script>
+
 </body>
 </html>
