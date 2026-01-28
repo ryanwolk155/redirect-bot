@@ -1,9 +1,27 @@
-{
-  "redirects": [
-    {
-      "source": "/go/:slug",
-      "destination": "https://t.me/naysafada16_bot?start=tiktok",
-      "permanent": false
-    }
-  ]
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecionando...</title>
+
+  <script>
+    (function () {
+      // 🔁 URL do bot (troque aqui)
+      var BOT_URL = "https://t.me/naysafada16_bot?start=tiktok";
+
+      // Detecta mobile
+      var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+
+      // Redireciona o mais rápido possível
+      if (isMobile) {
+        window.location.replace(BOT_URL);
+      } else {
+        window.location.href = BOT_URL;
+      }
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>
